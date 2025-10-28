@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 🎨 Colores base del tema oscuro -->
+    <color name="md_black">#121212</color>
+    <color name="md_surface">#1E1E1E</color>
+    <color name="md_card">#232323</color>
+    <color name="md_on">#FFFFFF</color>
+
+    <!-- 🌈 Colores de materias -->
+    <color name="course_blue">#3B82F6</color>
+    <color name="course_purple">#8B5CF6</color>
+    <color name="course_green">#22C55E</color>
+    <color name="course_orange">#F59E0B</color>
+    <color name="course_red">#EF4444</color>
+</resources>
+
+

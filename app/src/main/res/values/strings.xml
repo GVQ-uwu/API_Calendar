@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">API Calendar</string>
+    <string name="menu_home">Inicio</string>
+    <string name="menu_calendar">Calendario</string>
+    <string name="menu_list">Lista</string>
+    <string name="menu_notifications">Notificaciones</string>
+    <string name="menu_settings">Configuración</string>
+</resources>
+
+
+

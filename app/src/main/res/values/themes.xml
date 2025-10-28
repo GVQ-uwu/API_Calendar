@@ -1,0 +1,9 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Theme.ApiCalendar" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="android:statusBarColor">@color/md_black</item>
+        <item name="android:navigationBarColor">@color/md_black</item>
+        <item name="colorSurface">@color/md_surface</item>
+        <item name="colorOnSurface">@color/md_on</item>
+        <item name="android:windowBackground">@color/md_black</item>
+    </style>
+</resources>
