@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/md_black"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="12dp">
+
+    <!-- Toolbar superior -->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:title="Calendario académico"
+        android:background="@color/md_surface"
+        android:titleTextColor="@color/md_on" />
+
+    <!-- Calendario -->
+    <CalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:weekDayTextAppearance="@android:style/TextAppearance.Material.Small"
+        android:dateTextAppearance="@android:style/TextAppearance.Material.Medium" />
+
+    <!-- Etiqueta -->
+    <TextView
+        android:id="@+id/tvSelectedDate"
+        android:text="Eventos del día"
+        android:textColor="@color/md_on"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginTop="12dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <!-- Lista de eventos -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvEventsDay"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="8dp" />
+</LinearLayout>

@@ -36,5 +36,10 @@ class MainActivity : AppCompatActivity() {
             binding.drawerLayout.closeDrawer(GravityCompat.START)
             true
         }
+
+        binding.tvGreeting.text = "Hola, Estudiante 👋"
+        binding.tvNextClassInfo.text = "Programación - 10:00 AM en Lab 2"
+        binding.tvSummary.text = "• 2 clases programadas\n• 1 entrega pendiente\n• 0 exámenes hoy"
+
     }
 }

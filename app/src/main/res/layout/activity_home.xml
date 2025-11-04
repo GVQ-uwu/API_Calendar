@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="12dp"
+    android:background="@color/md_black">
+
+    <!-- Barra superior -->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:title="@string/menu_home"
+        android:background="@color/md_surface"
+        android:titleTextColor="@color/md_on" />
+
+    <!-- Saludo -->
+    <TextView
+        android:id="@+id/tvGreeting"
+        android:text="Hola, Génesis 👋"
+        android:textColor="@color/md_on"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="12dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <!-- Tarjeta próxima clase -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardNextClass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="16dp"
+        app:cardBackgroundColor="@color/md_card"
+        android:layout_marginTop="12dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvNextClassTitle"
+                android:text="Próxima clase: Cálculo I"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="@color/md_on"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tvNextClassTime"
+                android:text="Hora: 10:30 – Sala B203"
+                android:textColor="@color/md_on"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Lista de materias del día -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvToday"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="16dp" />
+</LinearLayout>

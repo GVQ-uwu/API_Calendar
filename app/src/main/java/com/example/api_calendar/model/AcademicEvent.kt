@@ -1,8 +1,7 @@
 package com.example.api_calendar.model
 
-class AcademicEvent {
-
-
-
-
-}
+data class AcademicEvent(
+    val title: String,
+    val time: String,
+    val detail: String
+)

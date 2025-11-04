@@ -3,29 +3,114 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/drawerLayout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/md_black">
 
-    <!-- Contenedor principal -->
+    <!-- Contenido principal -->
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <!-- Toolbar superior -->
+        <!-- Toolbar -->
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:title="@string/app_name"
-            app:titleCentered="true"
-            app:titleTextColor="@color/md_on"
-            android:background="@color/md_surface"/>
+            android:background="@color/md_surface"
+            android:title="API Calendar"
+            android:titleTextColor="@color/md_on" />
 
-        <!-- Contenido dinámico -->
-        <FrameLayout
-            android:id="@+id/contentFrame"
+        <!-- Contenido visible del inicio -->
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!-- Saludo -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvGreeting"
+                    android:text="Hola, Estudiante 👋"
+                    android:textColor="@color/md_on"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="12dp" />
+
+                <!-- Próxima clase -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="16dp"
+                    app:cardBackgroundColor="@color/md_surface"
+                    android:layout_marginBottom="12dp">
+
+                    <LinearLayout
+                        android:padding="16dp"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/tvNextClassTitle"
+                            android:text="Próxima clase:"
+                            android:textColor="@color/md_on"
+                            android:textStyle="bold"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/tvNextClassInfo"
+                            android:text="Cálculo I - 08:30 en Sala B203"
+                            android:textColor="@color/md_on"
+                            android:layout_marginTop="4dp"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Resumen del día -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Resumen del día"
+                    android:textColor="@color/md_on"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="8dp" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="16dp"
+                    app:cardBackgroundColor="@color/md_surface">
+
+                    <LinearLayout
+                        android:padding="16dp"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/tvSummary"
+                            android:text="• 2 clases programadas\n• 1 entrega pendiente\n• 0 exámenes hoy"
+                            android:textColor="@color/md_on"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+        </ScrollView>
     </LinearLayout>
 
     <!-- Menú lateral -->
@@ -35,5 +120,6 @@
         android:layout_height="match_parent"
         android:layout_gravity="start"
         app:menu="@menu/menu_main_drawer"
-        app:headerLayout="@layout/nav_header"/>
+        app:headerLayout="@layout/nav_header" />
+
 </androidx.drawerlayout.widget.DrawerLayout>
